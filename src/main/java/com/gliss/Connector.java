@@ -24,7 +24,7 @@ public class Connector extends HttpServlet {
 
 		try {
 			Connection con = Provider.getConnection();
-			response.getWriter().append("Connected to: ").append(con.toString());
+			response.getWriter().append("Connected: ").append(con.toString());
 		} catch (SQLException e) {
 			response.getWriter().append("Not connected: ").append(e.getMessage());
 			e.printStackTrace();
